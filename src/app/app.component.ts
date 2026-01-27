@@ -4,6 +4,7 @@ import { RouterOutlet } from '@angular/router';
 import { ConvertToObservableComponent } from "./convert-to-observable/convert-to-observable.component";
 import { CustomObservablesComponent } from "./custom-observables/custom-observables.component";
 import { funcObservable, functionObs } from './services/functions'
+import { CancellingObservableComponent } from './cancelling-observable/cancelling-observable.component';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,8 @@ import { funcObservable, functionObs } from './services/functions'
     RouterOutlet,
     // ConvertToObservableComponent,
     // CustomObservablesComponent,
-    FunctionObservableComponent
+    // FunctionObservableComponent,
+    CancellingObservableComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
