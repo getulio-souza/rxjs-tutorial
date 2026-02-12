@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { filter, interval, map, of, take } from 'rxjs';
-import { Router, RouterLink } from '@angular/router';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-operators-basics',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, RouterOutlet],
   templateUrl: './operators-basics.component.html',
   styleUrl: './operators-basics.component.scss'
 })
@@ -40,20 +40,20 @@ export class OperatorsBasicsComponent implements OnInit{
 
 
     //take operator
-    interval(500)
-      .pipe(
-        take(5)
-      )
-      .subscribe((data) => {
+    // interval(500)
+    //   .pipe(
+    //     take(5)
+    //   )
+    //   .subscribe((data) => {
 
-      console.log(data)
-    })
+    //   console.log(data)
+    // })
+
+    //take last
 
 
-  }
 
-  goToTake() {
-    this.router.navigate(['/take'])
+
   }
 
 }

@@ -13,12 +13,6 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [
     RouterOutlet,
-    // ConvertToObservableComponent,
-    // CustomObservablesComponent,
-    // FunctionObservableComponent,
-    // CancellingObservableComponent,
-    // OperatorsBasicsComponent,
-    OperatorsBasicsComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
