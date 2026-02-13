@@ -1,5 +1,5 @@
-import { AfterViewInit, Component } from '@angular/core';
-import { fromEvent, interval, Observable, Subscription, takeUntil } from 'rxjs';
+import { Component } from '@angular/core';
+import { fromEvent, interval, Observable, Subject, Subscription, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'app-take-until-operator',
@@ -8,30 +8,25 @@ import { fromEvent, interval, Observable, Subscription, takeUntil } from 'rxjs';
   templateUrl: './take-until-operator.component.html',
   styleUrl: './take-until-operator.component.scss'
 })
-export class TakeUntilOperatorComponent implements AfterViewInit {
+export class TakeUntilOperatorComponent{
 
   buttonEvent!: Observable<Event>
 
   timer!: Subscription;
 
-  ngAfterViewInit(): void {
-    this.buttonEvent = fromEvent(document.getElementById('takeUntil')!, 'click')
-    console.log(this.buttonEvent)
-  }
-
+  stopTimer$ = new Subject<void>();
 
   startTimer() {
-    this.timer = interval(500).pipe(takeUntil(this.buttonEvent)).subscribe({
-      next: (data) => {
-        console.log(data)
-      },
-      error: (err) => {
-        console.log(err)
-      },
-    })
+    interval(500)
+      .pipe(
+        (takeUntil(this.stopTimer$)))
+      .subscribe({
+        next: (data) => console.log(data),
+        complete: () => console.log('completed!')
+        })
   }
 
   endTimer() {
-    this.timer.unsubscribe();
+    this.stopTimer$.next()
   }
 }
