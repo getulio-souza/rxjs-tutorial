@@ -7,6 +7,7 @@ import { funcObservable, functionObs } from './services/functions'
 import { CancellingObservableComponent } from './cancelling-observable/cancelling-observable.component';
 import { OperatorsBasicsComponent } from "./operators-basics/operators-basics.component";
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
