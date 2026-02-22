@@ -3,6 +3,7 @@ import { OperatorsBasicsComponent } from './operators-basics/operators-basics.co
 import { TakeOperatorComponent } from './operators-basics/take-operator/take-operator.component';
 import { TakeLastOperatorComponent } from './operators-basics/take-last-operator/take-last-operator.component';
 import { TakeUntilOperatorComponent } from './operators-basics/take-until-operator/take-until-operator.component';
+import { TakeWhileOperatorComponent } from './operators-basics/take-while-operator/take-while-operator.component';
 
 export const routes: Routes = [
   {
@@ -17,6 +18,7 @@ export const routes: Routes = [
       { path: 'take', component: TakeOperatorComponent },
       { path: 'takeLast', component: TakeLastOperatorComponent },
       { path: 'takeUntil', component: TakeUntilOperatorComponent },
+      { path: 'takeWhile', component: TakeWhileOperatorComponent },
     ],
   },
 ];
