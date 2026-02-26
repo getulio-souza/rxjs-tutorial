@@ -8,6 +8,7 @@ import { SkipOperatorComponent } from './operators-basics/skip-operator/skip-ope
 import { SkipLastOperatorComponent } from './operators-basics/skip-last-operator/skip-last-operator.component';
 import { SkipUntilOperatorComponent } from './operators-basics/skip-until-operator/skip-until-operator.component';
 import { SkipWhileOperatorComponent } from './operators-basics/skip-while-operator/skip-while-operator.component';
+import { FilterOperatorComponent } from './operators-basics/filter-operator/filter-operator.component';
 
 export const routes: Routes = [
   {
@@ -26,7 +27,8 @@ export const routes: Routes = [
       {path: 'skip', component: SkipOperatorComponent},
       {path: 'skipLast', component: SkipLastOperatorComponent},
       { path: 'skipUntil', component: SkipUntilOperatorComponent },
-      { path: 'skipWhile', component: SkipWhileOperatorComponent }
+      { path: 'skipWhile', component: SkipWhileOperatorComponent },
+      { path: 'filter', component: FilterOperatorComponent },
     ],
   },
 ];
