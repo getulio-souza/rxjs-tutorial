@@ -1,0 +1,18 @@
+<p>merge-map-operator works!</p>
+
+<table style="text-align: center;">
+  <thead>
+    <tr>
+      <th>user id:</th>
+      <th>title:</th>
+      <th>body</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of userData" style="height: 50px;">
+      <td>{{user.id}}</td>
+      <td>{{user.title}}</td>
+      <td>{{user.body}}</td>
+    </tr>
+  </tbody>
+</table>

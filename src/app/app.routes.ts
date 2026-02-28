@@ -9,6 +9,8 @@ import { SkipLastOperatorComponent } from './operators-basics/skip-last-operator
 import { SkipUntilOperatorComponent } from './operators-basics/skip-until-operator/skip-until-operator.component';
 import { SkipWhileOperatorComponent } from './operators-basics/skip-while-operator/skip-while-operator.component';
 import { FilterOperatorComponent } from './operators-basics/filter-operator/filter-operator.component';
+import { MergeMapOperatorComponent } from './operators-basics/merge-map-operator/merge-map-operator.component';
+import { MergeMapToOperatorComponent } from './operators-basics/merge-map-to-operator/merge-map-to-operator.component';
 
 export const routes: Routes = [
   {
@@ -29,6 +31,7 @@ export const routes: Routes = [
       { path: 'skipUntil', component: SkipUntilOperatorComponent },
       { path: 'skipWhile', component: SkipWhileOperatorComponent },
       { path: 'filter', component: FilterOperatorComponent },
+      { path: 'merge-map', component: MergeMapOperatorComponent },
     ],
   },
 ];
