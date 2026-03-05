@@ -12,6 +12,7 @@ import { FilterOperatorComponent } from './operators-basics/filter-operator/filt
 import { MergeMapOperatorComponent } from './operators-basics/merge-map-operator/merge-map-operator.component';
 import { ConcatMapOperatorComponent } from './operators-basics/concat-map-operator/concat-map-operator.component';
 import { SwitchMapOperatorComponent } from './switch-map-operator/switch-map-operator.component';
+import { SubjectComponent } from './operators-basics/subject/subject.component';
 
 export const routes: Routes = [
   {
@@ -35,6 +36,8 @@ export const routes: Routes = [
       { path: 'merge-map', component: MergeMapOperatorComponent },
       { path: 'concat-map', component: ConcatMapOperatorComponent },
       { path: 'switch-map', component: SwitchMapOperatorComponent },
+
+      {path: 'subject', component: SubjectComponent}
     ],
   },
 ];

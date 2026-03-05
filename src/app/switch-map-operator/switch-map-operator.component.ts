@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { interval, map, of, switchMap } from 'rxjs';
+import { filter, interval, map, of, switchMap } from 'rxjs';
 import { ajax } from 'rxjs/ajax';
 
 @Component({
@@ -15,16 +15,14 @@ export class SwitchMapOperatorComponent implements OnInit {
       .pipe(
         filter(id => id > 0),
         switchMap(id =>
-          return ajax(`https://jsonplaceholder.typicode.com/posts/${id}`)
-            .pipe(
-              map(response => response.response)
-          )
+          ajax(`https://jsonplaceholder.typicode.com/posts/${id}`)
+          .pipe(map(response => response.response))
         )
       )
 
       .subscribe({
-        next: data => console.log(data)
+        next: data => console.log(data),
         error: err => console.error(err)
       })
-  }
+}
 }
