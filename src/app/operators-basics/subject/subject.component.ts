@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, of, Subject } from 'rxjs';
+import { CreateTaskComponent } from "./create-task/create-task.component";
+import { ShowTaskComponent } from "./show-task/show-task.component";
 
 @Component({
   selector: 'app-subject',
   standalone: true,
-  imports: [],
+  imports: [CreateTaskComponent, ShowTaskComponent],
   templateUrl: './subject.component.html',
   styleUrl: './subject.component.scss'
 })
@@ -68,7 +70,7 @@ export class SubjectComponent implements OnInit {
       }
     }
 
-    let observer2= {
+    let observer2 = {
       next: (data: number) => {
         console.log('observer 2:',data)
       },
