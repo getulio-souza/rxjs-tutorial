@@ -8,9 +8,7 @@ export class TaskService {
 
   newTask = new Subject<string>();
 
-  task: string = ""
-
-  constructor() {
-    this.newTask.next(this.task)
+  createTask(value: string){
+    this.newTask.next(value)
   }
 }
