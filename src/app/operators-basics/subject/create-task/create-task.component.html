@@ -1,4 +1,8 @@
 <div>
-  <input type="text">
+  <input
+   type="text" 
+   [(ngModel)]="newTask"
+   (keyup.enter)="onCreateTask()"
+   >
   <button (click)="onCreateTask()">create task</button>
 </div>

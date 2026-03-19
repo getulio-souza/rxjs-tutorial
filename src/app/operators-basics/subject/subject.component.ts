@@ -14,7 +14,7 @@ export class SubjectComponent implements OnInit {
 
   ngOnInit(): void {
     // this.observable()
-    this.subjectAsObservable()
+    // this.subjectAsObservable()
   }
 
 
